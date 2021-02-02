@@ -154,26 +154,6 @@
     position: relative;
   }
 
-  .site-nav-link::after{
-    position: absolute;
-    opacity: 0;
-    
-    transform: translateY(29px);
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #2196F3;
-    border-radius: 2px;
-
-    transition: opacity var(--transition-duration) var(--transition-timing-function);
-  }
-
-  .site-nav-link:hover::after,
-  .site-nav-link:focus::after {
-    opacity: 1;
-  }
-  
   .site-nav-link.current::after{
     position: absolute;
     opacity: 1;
@@ -271,7 +251,7 @@
     margin-bottom: 0;
     padding: 10px 32px;
     min-width: 200px;
-    min-height: 50px;
+    height: 50px;
 
     cursor: pointer;
 
@@ -353,6 +333,8 @@
     position: relative;
     width: 370px;
   }
+
+ 
 
   .about-us-list .about-us-item:not(:last-child){
     margin-right: 30px;
@@ -457,8 +439,8 @@
 
     border-radius: 50%;
 
-    transition: color var(--transition-duration) var(--transition-timing-function);
-    transition: background-color var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function);
   }
 
   .our-team-icon-item .our-team-icon-link:hover,
@@ -504,8 +486,8 @@
 
     color: var(--social-link-color);
 
-    transition: color var(--transition-duration) var(--transition-timing-function);
-    transition: border var(--transition-duration) var(--transition-timing-function);
+    transition: color var(--transition-duration) var(--transition-timing-function),
+     border var(--transition-duration) var(--transition-timing-function);
   }
 
   .our-customers-item .our-customers-link:hover,
@@ -676,16 +658,17 @@
 
     cursor: pointer;
 
-    transition: color var(--transition-duration) var(--transition-timing-function);
-    transition: background-color var(--transition-duration) var(--transition-timing-function);
-    transition: cursor var(--transition-duration) var(--transition-timing-function);
-  
+    transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    filter var(--transition-duration) var(--transition-timing-function);
  }
     
   .portfolio-button-list .portfolio-button:hover,
   .portfolio-button-list .portfolio-button:focus {
       background-color: var(--accent-color);
       color: var(--primary-white-color);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
   }
 
 
